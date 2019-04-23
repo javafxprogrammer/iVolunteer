@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lengwe.iVolunteer.ActivityAdd"
+    android:orientation="vertical"
+    android:background="@drawable/shore"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient"
+        android:fillViewport="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:layout_gravity="center"
+            android:text="Add Activity"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_marginBottom="0dp"/>
+
+        <ImageView
+            android:id="@+id/add_activity_image_id"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_camera_24dp"
+            android:onClick="add_image_btn"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/add_activity_name_parent_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/add_activity_name_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Activity"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/add_activity_volunteer_firstName_parent_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/add_activity_volunteer_firstName_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Volunteer First Name"
+                android:inputType="textPersonName"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/add_activity_volunteer_sirName_parent_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/add_activity_volunteer_sirName_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Volunteer Sir Name"
+                android:inputType="textPersonName"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/add_activity_description_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Activity Description"
+                android:inputType="text"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/add_activity_location_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Location"
+                android:inputType="text"
+                android:layout_marginBottom="16dp"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/getPlace"
+            android:text="Pick Location"
+            android:background="@drawable/rectagle_button"
+            android:textAllCaps="false"
+            android:onClick="getPlace"
+            android:layout_marginBottom="16dp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pick_date_id"
+            android:text="Pick Date"
+            android:background="@drawable/rectagle_button"
+            android:textAllCaps="false"
+            android:onClick="datePicker"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pick_time_id"
+            android:text="Pick Time"
+            android:background="@drawable/rectagle_button"
+            android:layout_marginBottom="16dp"
+            android:textAllCaps="false"
+            android:onClick="timePicker"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/submit_activity_id"
+            android:text="Submit"
+            android:background="@drawable/submit_btn"
+            android:textAllCaps="false"
+            android:textColor="@color/transparent"
+            android:onClick="add_submit_activity"/>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>
